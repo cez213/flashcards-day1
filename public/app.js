@@ -9,18 +9,19 @@ app.controller('FlashCardController', function($scope){
 	        { text: 'Some kind of fish, right?', correct: false }
 	    ]
 	};*/
-
+	$scope.answered = false;
 	$scope.answerQuestion = function(answer){
+		if($scope.answered) return;
 		$scope.answered = true;
 		$scope.answeredCorrectly = (answer.correct)? true : false;
 		//$scope.count = $scope.count + 1;
 	}
 
-	$scope.iterate = function(){
+/*	$scope.iterate = function(){
 		$scope.count = $scope.count + 1;
 		if($scope.count === 3) $scope.answered = true;
 		else $scope.answered = false;
-	}
+	}*/
 
 })
 
